@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Astral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+		$( document ).ready(function() {
+			var total = 0;
+			var list = [];
+			$('.questions').hide();
+			$('.sousQuestions').hide();
+
+			$('#typeDeSite').change(function(){
+				total = 0;
+				changeTypeSite($(this).val());
+			});
+
+			$('#gallerieImageCB').click(function(){
+				if($(this).prop("checked")){
+					$('#sousQuestionsImageModifiable').show();
+				} else {
+					$('#sousQuestionsImageModifiable').hide();
+					$('#gallerieImageModifiableNon').prop('checked', true);
+				}
+			});
+
+			$('#contactCB').click(function(){
+				if($(this).prop("checked")){
+					$('#sousQuestionsEnvoieMail').show();
+				} else {
+					$('#sousQuestionsEnvoieMail').hide();
+					$('#envoieMailNon').prop('checked', true);
+				}
+			});
+
+			$('#produitsCB').click(function(){
+				if($(this).prop("checked")){
+					$('#produitsModifiable').show();
+				} else {
+					$('#produitsModifiable').hide();
+					$('#produitsModifiableNon').prop('checked', true);
+				}
+			});
+
+
+
+		});
+
+		function changeTypeSite(option){
+			$('.questions').hide();
+			$('.sousQuestions').hide();
+			$('input[type=checkbox]').prop('checked', false);
+
+			switch(option){
+				case "0" :
+					break;
+				case "1" :
+					$('#presentationPart').show();
+					break;
+				case "2" :
+					break;
+			}
+		}
+
+
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Acceuil</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>Gallerie</span></a>
+						<a href="#invoice" class="fas fa-file-invoice"><span>Estimation</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Julien Masson</h1>
+									<ul>
+										<li><p>Diplomé en <i>Technologies de l'Informatique</i></p></li>
+										<li><p>Formation en <i>Business Datas Analyst</i></p></li>
+									</ul>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="images/code.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Gallerie</h2>
+								</header>
+								<p>
+									Réalisations pour profesionnels / particulier
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+										</div>
+									</div>
+								</section>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+							<!-- Facture -->
+								<article id="invoice" class="panel">
+									<header>
+										<h2>Estimation</h2>
+									</header>
+									<form action="#" method="post">
+										<div>
+											<div class="row">
+												Type de site
+												<div class="col-12">
+													<select id='typeDeSite'>
+														<option value='0'>Choisssissez le type que vous voulez</option>
+														<option value='1'>Site de présentation</option>
+														<option value='2'>Plateforme intranet</option>
+													</select>
+												</div>
+												<div class='questions' id='presentationPart'>
+													<div class="col-12">
+														<input type="checkbox" id="presentationEntrepriseCB" name="presentationEntrepriseCB">
+														<label for="presentationEntrepriseCB">Présentation de l'entreprise</label>
+													</div>
+													<div class="col-12">
+														<input type="checkbox" id="gallerieImageCB" name="gallerieImageCB">
+														<label for="gallerieImageCB">Gallerie d'images</label>
+													</div>
+													<div class='sousQuestions' id='sousQuestionsImageModifiable'>
+														Modifiable
+														<div class="col-12">
+															<input type="radio" id="gallerieImageModifiableOui" name="gallerieImageModifiable" value='oui'>
+															<label for="gallerieImageModifiableOui">Oui</label>
+															<input type="radio" id="gallerieImageModifiableNon" name="gallerieImageModifiable" checked value='non'>
+															<label for="gallerieImageModifiableNon">Non</label>
+														</div>
+													</div>
+													<div class="col-12">
+														<input type="checkbox" id="contactCB" name="contactCB">
+														<label for="contactCB">Contact</label>
+													</div>
+													<div class='sousQuestions' id='sousQuestionsEnvoieMail'>
+														Possibilité de vous envoyer un mail via sur la page avec coordonnées de la personne.
+														<div class="col-12">
+															<input type="radio" id="envoieMailOui" name="envoieMail" value='oui'>
+															<label for="envoieMailOui">Oui</label>
+															<input type="radio" id="envoieMailNon" name="envoieMail"  checked value='non'>
+															<label for="envoieMailNon">Non</label>
+														</div>
+													</div>
+
+													<div class="col-12">
+														<input type="checkbox" id="produitsCB" name="produitsCB">
+														<label for="produitsCB">Visibilité de vos produits</label>
+													</div>
+
+													<div class='sousQuestions' id='produitsModifiable'>
+														Possibilité d'ajouter, modifier et supprimer des produits disponible sur le site.
+														<div class="col-12">
+															<input type="radio" id="produitsModifiableOui" name="produitsModifiable" value='oui'>
+															<label for="produitsModifiableOui">Oui</label>
+															<input type="radio" id="produitsModifiableNon" name="produitsModifiable" checked value='non'>
+															<label for="produitsModifiableNon">Non</label>
+														</div>
+													</div>
+
+													<div class="col-12">
+														<input type="checkbox" id="offresEmploi" name="offresEmploi">
+														<label for="offresEmploi">Proposer des offres d'emplois</label>
+													</div>
+
+												<div class='questions' id='intranetPart'>
+												</div>
+
+												<div class="col-12">
+													<input type="submit" value="Send Message" />
+												</div>
+											</div>
+										</div>
+									</form>
+									<div id='totalEstimation'>
+										<p>Total</p>
+										<div id='total'></div>
+									</div>
+								</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
